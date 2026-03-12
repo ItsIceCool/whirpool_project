@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-whirlpool-blue: #1D4E89;
+  --color-whirlpool-accent: #00A1E4;
+  --color-whirlpool-light: #E6F6FC;
+  --color-whirlpool-gray: #F3F4F6;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-whirlpool-gray text-black antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-whirlpool-accent hover:bg-whirlpool-accent/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-whirlpool-blue hover:bg-whirlpool-blue/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2;
+}
+
+.btn-outline {
+  @apply border-2 border-whirlpool-accent text-whirlpool-accent hover:bg-whirlpool-accent hover:text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2;
+}
+
+.sidebar-item {
+  @apply flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-slate-600 hover:bg-whirlpool-light hover:text-whirlpool-blue;
+}
+
+.sidebar-item-active {
+  @apply bg-whirlpool-blue text-white hover:bg-whirlpool-blue hover:text-white;
+}
